@@ -11,14 +11,14 @@
                   <br />Di Layar Gadget Anda
                 </h2>
                 <p class="lead">Ayo segera pilih dan pesan makanan favorit Anda</p>
-                <router-link class="btn btn-lg btn-success" to="/foods">
+                <router-link class="btn btn-lg btn-success" to="/makanan">
                   <b-icon-arrow-right></b-icon-arrow-right>Pesan
                 </router-link>
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <img src="../assets/images/banner.png" width="100%" />
+            <img src="../assets/images/banner.png" width="100%" alt="" />
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
       <div class="d-sm-block d-md-none">
         <div class="row mt-4">
           <div class="col-md-6 mb-3">
-            <img src="../assets/images/banner.png" width="100%" />
+            <img src="../assets/images/banner.png" width="100%" alt=""/>
           </div>
           <div class="col-md-6">
             <div class="d-flex h-100">

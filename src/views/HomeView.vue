@@ -9,14 +9,14 @@
         </div>
         <div class="col">
           <router-link class="btn btn-success float-right" to="/makanan">
-            Lihat Semua Makanan
+            <b-icon-eye class=""></b-icon-eye>Lihat Semua Makanan
           </router-link>
         </div>
       </div>
 
-      <div class="row mb-3">
-        <div class="col-md-3 mt-4">
-          <CardProductComponent />
+      <div class="row mb-4">
+        <div class="col-md-4 mt-4" v-for="product in products" :key="product.id">
+          <CardProductComponent :product="product"/>
         </div>
       </div>
     </div>
@@ -42,12 +42,12 @@ export default {
       products: [
        
       ]
-    }
+    };
   },
   methods: {
     setProducts(data) {
       this.products = data;
-    }
+    },
   },
   mounted() {
     axios
@@ -55,5 +55,5 @@ export default {
       .then((response) => this.setProducts(response.data))
       .catch((error) => console.log(error))
   },
-}
+};
 </script>

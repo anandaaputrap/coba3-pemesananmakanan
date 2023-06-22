@@ -11,3 +11,14 @@
 .btn-warning:hover{
     border-color: #000000;
 }
+.card-product{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+.breadcrumb{
+    background-color: lightblue;
+}
+.breadcrumb-item.active{
+    color: #000000;
+    font-weight: bold;
+}
