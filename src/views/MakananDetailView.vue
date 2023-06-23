@@ -43,6 +43,7 @@
                 type="number"
                 class="form-control"
                 v-model="pesan.jumlah_pemesanan"
+                id="jumlah_pemesanan"
               />
             </div>
             <div class="form-group">
@@ -51,11 +52,11 @@
                 v-model="pesan.keterangan"
                 class="form-control"
                 placeholder="Keterangan spt : Pedes, Nasi Setengah .."
+                id="keterangan"
               ></textarea>
             </div>
-
             <button type="submit" class="btn btn-success" @click="pemesanan">
-              <b-icon-cart></b-icon-cart>Pesan
+              <b-icon-cart3></b-icon-cart3>Pesan
             </button>
           </form>
         </div>
@@ -74,36 +75,27 @@ export default {
   data() {
     return {
       product: {},
-      pesan: {},
+      pesan: {}
     };
   },
   methods: {
     setProduct(data) {
       this.product = data;
     },
-    pemesanan() {
-      if (this.pesan.jumlah_pemesanan) {
-        this.pesan.products = this.product;
-        axios
-          .post("http://localhost:3000/keranjangs", this.pesan)
-          .then(() => {
-            this.$toast.success("Sukses Masuk Keranjang", {
-              type: "success",
-              position: "top-right",
-              duration: 3000,
-              dismissible: true,
-            });
-          })
-          .catch((err) => console.log(err));
-      } else {
-        this.$toast.error("Jumlah Pesanan Harus diisi", {
-          type: "error",
+    pemesanan(){
+      this.pesan.products = this.product;
+      axios
+      .post("http://localhost:3000/keranjangs", this.pesan)
+      .then(() => {
+        this.$toast.success("Berhasil Masuk Keranjang", {
+          type: "success",
           position: "top-right",
-          duration: 3000,
-          dismissible: true,
+          duration: 5000,
+          dismisable: true,
         });
-      }
-    },
+      })
+      .catch((err) => console.log(err));
+    }
   },
   mounted() {
     axios
