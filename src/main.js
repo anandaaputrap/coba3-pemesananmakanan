@@ -8,7 +8,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/main.css'
 
-Vue.use(BootstrapVue, BootstrapVueIcons, IconsPlugin)
+
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-bootstrap.css';
+
+Vue.use(BootstrapVue, BootstrapVueIcons, IconsPlugin, VueToast,)
 Vue.component('BIconBag', BIconBag)
 Vue.component('BIconArrowRight', BIconArrowRight)
 Vue.component('BIconEye', BIconEye)

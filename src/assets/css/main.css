@@ -22,3 +22,6 @@
     color: #000000;
     font-weight: bold;
 }
+.img-fluid{
+    border-radius: 10px;
+}
